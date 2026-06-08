@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { LuSparkles, LuMail, LuGlobe } from "react-icons/lu";
-
+import Image from "next/image"
 const cols = [
   {
     title: "Platform",
@@ -36,15 +36,22 @@ export function Footer() {
       <div className="relative mx-auto max-w-7xl">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-14">
           <div className="col-span-2">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 font-display font-extrabold tracking-tight text-white"
-            >
-              <span className="size-9 rounded-full bg-gradient-to-br from-primary to-accent grid place-items-center glow-purple">
-                <LuSparkles className="size-4 text-white" />
-              </span>
-              <span className="text-xl">MXPERTZ</span>
-            </Link>
+            <div
+         
+          className="flex items-center "
+        >
+         <Link href="/" >
+                    <Image 
+                      width={150} 
+                      height={60} 
+                      src="/assets/logo1.png" 
+                      alt="logo" 
+                   laoding="lazy"
+                      className="hover:opacity-80 cursor-pointer object-contain" 
+                    />
+                  </Link>
+        </div>
+
             <p className="mt-4 text-foreground/65 text-sm max-w-xs font-medium">
               The curated marketplace where ambitious teams meet elite digital experts.
             </p>
@@ -78,7 +85,7 @@ export function Footer() {
           ))}
         </div>
         <div className="pt-8 border-t border-border/40 flex flex-wrap items-center justify-between gap-4 text-sm text-foreground/60 font-medium">
-          <div>© 2026 MXPERTZ. Crafted for the elite.</div>
+          <div>© 2026 hire top coder. Crafted for the elite.</div>
           <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/50">
             Built with obsession.
           </div>

@@ -65,7 +65,7 @@ export default function WorkPage() {
         <AmbientGlow />
         <div className="relative mx-auto max-w-5xl text-center">
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-mono uppercase tracking-[0.2em] text-primary border border-primary/40 bg-primary/10 mb-10 font-semibold">
+            <div className="inline-flex items-center gap-2 rounded-full px-3 md:px-4 py-1.5 text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] text-primary border border-primary/40 bg-primary/10 mb-10 font-semibold">
               Selected Work · 2024–2026
             </div>
           </Reveal>

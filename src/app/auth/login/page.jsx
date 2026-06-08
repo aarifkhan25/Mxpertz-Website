@@ -42,7 +42,7 @@ export default function Login() {
             aria-label="Login with Apple"
             className="w-full flex items-center justify-center gap-2 border border-primary/40 bg-primary/10 font-bold  py-3.5 px-4 rounded-xl transition-all duration-200 cursor-pointer"
           >
-            <FaApple className="text-base md:text-lg lg:text-2xl text-black flex-shrink-0" />
+            <FaApple className="text-base md:text-lg lg:text-2xl text-white flex-shrink-0" />
             Login with Apple
           </button>
         </div>
@@ -74,7 +74,7 @@ export default function Login() {
     peer-focus:top-[-10px] 
     peer-focus:text-[13px]
     peer-focus:text-slate-400
-    peer-focus:bg-[#090811] 
+    peer-focus:bg-[#11101a] 
     peer-focus:px-1
     
     /* ─── जब इनपुट खाली न हो (टेक्स्ट लिखा हो) तब भी ऊपर ही रहे ─── */
@@ -101,11 +101,11 @@ export default function Login() {
         </form>
 
         {/* Bottom Switch Links Wrapper */}
-        <div className="text-center mt-3 text-sm md:text-base text-slate-600 font-medium">
+        <div className="text-center mt-3 text-sm md:text-base text-slate-500 font-medium">
           Don't have an account yet?{' '}
           <Link
             href="/auth/register"
-            className="text-[#0047ff] hover:underline font-bold transition-all ml-0.5"
+            className="text-gradient-purple hover:underline font-bold transition-all ml-0.5"
           >
             Create An Account
           </Link>

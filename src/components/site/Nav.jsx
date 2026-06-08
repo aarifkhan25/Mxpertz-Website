@@ -1,8 +1,10 @@
 "use client"
 import  Link  from "next/link";
-import { HiSparkles, HiBars3 } from "react-icons/hi2";
+import {HiBars3 } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { MdOutlineClose } from "react-icons/md";
+import { FiAlignJustify } from "react-icons/fi";
 import Image from "next/image"
 const navLinks = [
   { to: "/hire", label: "Hire" },
@@ -25,6 +27,14 @@ export function ScrollProgress() {
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+   
+  
+  const toggleMobileMenu = () => {
+    setOpen(!open);
+   
+  };
+
+  
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
@@ -61,7 +71,7 @@ export function Nav() {
                   </Link>
         </div>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/85">
+        <div className="hidden md:flex items-center gap-8  text-sm font-medium text-foreground/85">
           {navLinks.map((l) => (
             <Link
               key={l.to}
@@ -81,17 +91,20 @@ export function Nav() {
           </Link>
           <Link
             href="/starthiring"
-            className="inline-flex items-center gap-1.5 text-sm font-bold bg-white text-black rounded-full px-5 py-2.5 hover:bg-white/90 transition shadow-lg"
+            className="inline-flex items-center gap-1.5 text-sm font-bold bg-white text-black rounded-full px-4 py-2 md:px-5 md:py-2.5 hover:bg-white/90 transition shadow-lg"
           >
             Start Hiring
           </Link>
           <button
-            className="md:hidden grid place-items-center size-10 rounded-full btn-glass text-white"
-            onClick={() => setOpen((v) => !v)}
+            className="md:hidden grid place-items-center size-10 rounded-full btn-glass text-white cursor-pointer"
+            
             aria-label="Menu"
           >
-            <HiBars3 className="size-4" />
-          </button>
+ {open ? (
+                      <MdOutlineClose onClick={toggleMobileMenu} className="w-6 h-6" />
+                    ) : (
+                      <FiAlignJustify onClick={toggleMobileMenu} className="w-6 h-6" />
+                    )}          </button>
         </div>
       </nav>
 

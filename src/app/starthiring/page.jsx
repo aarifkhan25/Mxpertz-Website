@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image"
 export default function HiringPage() {
   // Local state for the input fields
   const [formData, setFormData] = useState({
@@ -34,10 +35,15 @@ export default function HiringPage() {
       {/* ========================================================== */}
       {/* BRAND HEADER SECTION                                       */}
       {/* ========================================================== */}
-      <div className="flex items-center gap-2 mb-5">
-        <span className="text-2xl font-semibold tracking-normal text-white">
-          Pangea
-        </span>
+      <div className="flex items-center  mb-5">
+         <Image 
+                             width={120} 
+                             height={40} 
+                             src="/assets/logo1.png" 
+                             alt="logo" 
+                          laoding="lazy"
+                             className="hover:opacity-80 cursor-pointer object-contain" 
+                           />
       </div>
 
       {/* ========================================================== */}
